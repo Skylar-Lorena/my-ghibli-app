@@ -1,0 +1,415 @@
+@font-face {
+    font-family: AvantGardeMedium;
+    src: url(filmstyles/fonts/ITC\ Avant\ Garde\ Gothic\ Medium.otf);
+}
+
+html{
+    height: 100%;
+}
+
+/*main gradient*/
+body{
+    background-image: linear-gradient(to bottom right, #f060ce, #9ec4dd);
+}
+
+/*setting font*/
+*{
+    font-family:AvantGardeMedium;
+}
+
+.headers{
+    color:#fafbfa;
+    margin-left: 1em;
+    margin-right: .5em;
+    display: inline-block;
+}
+
+#ghibli-header-div{
+    border: #fafbfa solid 4px;
+    margin: 10pt;
+    box-shadow: inset 0 0 0.8em rgba(255,255,255,0.3), 0 0 0.8em rgba(255,255,255,0.3);
+}
+
+#main-header{
+    margin:1em .5em 0 1em;
+}
+
+#main-subhead{
+    margin:0 0 2em 2.5em;
+    display:block;
+}
+
+#nav-div{
+    margin: 10pt;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;   
+}
+
+#explore-div{
+    flex-basis: 100%;
+}
+
+#search-div{
+    flex-basis: 100%;
+}
+
+#explore-div .button{
+	color: #203daf;
+	background: none;
+	border-radius: 2em;
+    vertical-align: middle;
+	padding: 1em 4em;
+	letter-spacing: 0.35em;
+	font-size: 0.7em;
+    font-weight: bolder;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+	margin: 0.4em .8em .8em .8em;
+    box-shadow: inset 0 0 0 #203daf63, 0 0 1.2em #203daf63;
+	border: #fafbfa solid 2px;   
+}
+
+#explore-div .button:hover{
+    color: #fafbfa;
+	background-color: #203dafa9;
+	box-shadow: inset 0 0 0 #203daf63, 0 0 1.2em #203daf63;
+    border: #203daf solid 2px;  
+}
+
+input[type=text]{
+    color: #203daf;
+    background: none;
+    border-radius: 4pt;
+    border: #fafbfa solid 2px; 
+    font-size: 16px;
+    line-height: 22px;  
+    padding: .2em 1.4em .1em .8em;
+    display: inline-flex;
+    box-shadow: inset 0 0 0.8em rgba(255,255,255,0.3), 0 0 0.8em rgba(255,255,255,0.3);
+    transition: 180ms box-shadow ease-in-out;  
+}
+
+input[type=text]:focus {
+    outline: 3px solid transparent;
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +40%), 0.8);
+    background:#fafbfa;
+    color:#203daf;
+}
+
+#search-select{
+    display:inline-flex;
+    font-size: 16px;
+    padding: .25em 1.4em 0.1em 1.2em;
+    border-radius: 4pt;
+    color: #203daf;
+    background: none;
+    border: #fafbfa solid 2px; 
+    box-shadow: inset 0 0 0.8em rgba(255,255,255,0.3), 0 0 0.8em rgba(255,255,255,0.3);
+}
+
+#search-select:focus {
+    outline: none;
+}    
+
+#search-div .button{
+	color: #203daf;
+	background: none;
+	border-radius: 2em;
+    vertical-align: middle;
+	padding: 1em 1em 1em 1.3em;
+	letter-spacing: 0.35em;
+	font-size: 0.75em;
+    font-weight: bolder;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+	margin: 0.4em .8em .8em .8em;
+    box-shadow: inset 0 0 0 #203daf63, 0 0 1.2em #203daf63;
+	border: #fafbfa solid 2px;   
+    display: inline-flex;
+}
+
+#search-div .button:hover{
+    color: #fafbfa;
+	background-color: #203dafa9;
+	box-shadow: inset 0 0 0 #203daf63, 0 0 1.2em #203daf63;
+    border: #fafbfa solid 2px;    
+}
+
+#search-div .button:hover::after{
+    content: '  SEARCH'  
+}
+
+#view-lists{
+    flex-basis: 100%;
+    font-size: 10pt;
+}
+
+#view-lists .button{
+	color: #c80a2a;
+	background: none;
+	border-radius: 2em;
+    vertical-align: middle;
+	padding: .8em 3em;
+	letter-spacing: 0.35em;
+	font-size: 0.6em;
+    font-weight: bolder;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+	margin: 0.4em .8em .8em .8em;
+    box-shadow: inset 0 0 0 #c80a2a79, 0 0 1.2em #c80a2a79;
+	border: #fafbfa solid 2px;   
+}
+
+#view-lists .button:hover{
+    color: #fafbfa;
+	background-color: #c80a2a79;
+	box-shadow: inset 0 0 0 #c80a2a79, 0 0 1.2em #c80a2a79;
+    border: #c80a2a solid 2px;  
+}
+
+#results-info{
+    margin: 0 auto;
+    text-align: center;
+    color:#fafbfa;
+}
+
+#welcome-div{
+    background-color: #fafbfa3a;
+    border-radius: 4pt;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 4vw 8vw 2vw 8vw;
+    padding: 1em 4em 1em 4em;
+    text-align: center;
+    box-shadow: inset 0 0 0 #203daf63, 0 0 1.2em #203daf63;
+    color:#203daf;
+}
+
+#welcome-div h2{
+    flex-basis: 100%;
+}
+
+#welcome-div h3{
+    flex-basis: 100%;
+}
+
+.results-pop-up{
+    display: none;
+    position: absolute;
+    background-color: #00000093;
+    color: white;
+    height: 15rem;
+    width: 15rem;
+    overflow: hidden;
+}
+
+#results-div{
+    margin: 1rem;
+    display: inline-flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.alert{
+    color:#c80a2a;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.results-card { 
+    border: #c7e7fc48 solid 2px;
+    box-shadow: inset 0 0 0 #203daf63, 0 0 .8em #203daf63;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0.5em;
+}
+
+.results-card img { 
+    height:15rem;
+    object-fit: cover;
+    width: 15rem; 
+}
+
+.results-card:hover .results-pop-up{
+    display:block;
+}
+
+.results-pop-up h3{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+.card-p{
+    display: -webkit-box;
+    max-width: 15rem;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    font-size: 9pt;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+}
+
+.interactive{
+    align-self: flex-start;
+    margin: .2em;
+    display: none;
+}
+
+.results-card:hover .interactive{
+    display: flex;
+}
+
+.interactiveBtn{
+    height: 30px;
+    border-radius: 20pt;
+    border: #fafbfa8c solid 2px;
+    font-size:12px;
+    color: #203daf;
+    background-color: #fafbfad7;
+    margin: .5em 0em .5em 0em;
+}
+
+.interactiveBtn span{
+    pointer-events: none;
+}
+
+.heartBtn{
+    margin-left: .5em;
+}
+
+.fas.fa-heart{
+    color:#c80a2a;
+}
+
+.fas.fa-star{
+    color:#f9ac1f;
+}
+
+.heartBtn:hover::after{
+    content: ' favorite'
+}
+
+.starBtn{
+    margin-left: 1em;
+}
+
+.starBtn:hover::after{
+    content: ' watchlist'
+}
+
+/*More Info Card Styling*/
+
+.more-info-card {
+	background-image: linear-gradient(to bottom right, #60c0f060, #9eb2e38f, #c7e7fc48);
+	color: #fafbfa;
+    align-items: end;
+    display:inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1em 2em;
+    padding: 1em;
+}
+
+.backBtn {
+	background: none;
+	border: #fafbfa solid 2px;
+	border-radius: 2pt;
+	box-shadow: inset 0 0 0 #203daf63, 0 0 .8em #203daf63;
+	color: #fafbfa;
+	font-size: 0.9em;
+	font-weight: bold;
+    letter-spacing: 0.4em;
+    height: 35vw;
+	flex: 0 2 0;	
+    margin-top: .6em;
+	padding: 0 .5em 0 .6em;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+}
+
+.backBtn:hover {
+	background-color: #203daf63;
+	border: #fafbfa solid 2px;
+	box-shadow: inset 0 0 0 #203daf63, 0 0 .8em #203daf63;
+	color: #fafbfa;
+}
+
+.backBtn:hover::after {
+	content: "BACK";
+}
+
+.more-info-image {
+	border: #c7e7fc48 solid 2px;
+    box-shadow: inset 0 0 0 #203daf63, 0 0 .8em #203daf63;
+	border-radius: 2pt;
+	height: 35vw;
+	margin: 0.5em;
+	flex:0 2 auto;
+}
+
+#more-info-text {
+	flex:1 2 0;
+    display: inline-flex;
+    flex-flow: column;
+    margin-left: 1em;
+}
+
+#more-info-text h2 {
+	font-size: 25pt;
+	margin: 10pt 0pt 2pt 0pt;
+}
+
+#more-info-text h3 {
+	font-size: 16pt;
+	margin: 2pt 0pt 2pt 0pt;
+}
+
+#more-info-text h4 {
+    font-size: 12pt;
+    font-weight: lighter;
+    margin: 5pt 0pt 4pt 4pt;
+    flex: 1 1 95%;
+}
+
+#more-info-text p {
+	font-size: 10pt;
+	font-weight: lighter;
+	margin: 25pt 0pt 15pt 0pt;
+	width: 70%;
+}
+
+#mini-grid {
+	display: inline-flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: 3em;
+    width: 85%;
+}
+
+.mini-header{
+    flex: 1 1 100%;
+    align-self: flex-end;
+    order: 1;
+}
+
+.mini-cards {
+	border: #c7e7fc48 solid 2px;
+    box-shadow: inset 0 0 0 #203daf63, 0 0 0.8em #203daf63;
+    border-radius: 2pt;
+    height: 13vw;
+    margin: 0em 0.2em 2.5em 0.2em;
+    width: 13vw;
+    order: 2;
+}
+
+.mini-cards img {
+	height: 13vw;
+	object-fit: cover;
+	width: 13vw;
+}
+
+.mini-cards h5 {
+	margin: 0;
+}

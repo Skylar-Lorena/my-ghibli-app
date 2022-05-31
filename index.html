@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorenah's Ghibli App</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/8cb2420af7.js"></script>
+</head>
+<body>
+    <div id="ghibli-header-div" class='main-divs'>
+        <h1 id="main-header" class='headers' style="font-size: 30pt;">LORENAH'S GHIBLI APP</h2>
+        <h4 id="main-subhead" class='headers'>Ghibli Films</h4>
+    </div>
+    <div id='nav-div' class='main-divs'>
+        <div id='explore-div' class='sub-divs'>
+            <h3 class='headers'>EXPLORE THE COLLECTION
+                <button type='button' id='explore-films' class='button explore-btn' value='films'>FILMS</button>
+                <button type='button' id='explore-directors' class='button explore-btn' value='directors'>DIRECTORS</button>
+                <button type='button' id='explore-characters' class='button explore-btn' value='characters'>CHARACTERS</button>
+            </h3>
+       </div>
+        
+        <div id="search-div" class='sub-divs'>
+            <form id="search-form" class="form">
+                <!-- <h3 class='headers'>SEARCH</h3> -->
+                    <input type="text" name='keyword-input' id='keyword-input' size='30'>
+                    <select id="search-select" name="search-form-select">
+                        <option value='keyword'>Keyword</option>
+                        <option value ='title'>Title</option>
+                        <option value ='director'>Director</option>
+                        <option value ='character'>Character</option>
+                    </select>
+                    <button type="submit" name='submit' value='SEARCH' class='submit button'><i class='fas fa-search'></i> </button>
+            </form>
+        </div>
+
+        <div id='view-lists' class='sub-divs'>
+            <h3 class='headers'>VIEW YOUR
+                <button type='button' id='favorites' class='button explore-btn' value='favorites'><i class='fas fa-heart'></i> FAVORITE FILMS</button>
+                <button type='button' id='watchlist' class='button explore-btn' value='watchlist'><i class='fas fa-star'></i> WATCHLIST</button>
+            </h3>
+        </div>
+
+    </div>
+
+    <div>
+        <h3 id='results-info' class='alert'></h3>
+    </div>
+    
+    <div id='results-contain' class='main-divs'>
+        <div id='results-div' class='main-divs'>
+            <div id="welcome-div">
+                <h2>Welcome to <span style="color:#c80a2a">Lorenah's Ghibli App</span>!</h2>
+                <h3 style="color:#203dafaf;font-size: 11pt;">A fan app for exploring the characters and films of STUDIO GHIBLI.
+                    <br><br> 
+                    To get started, click an EXPLORE button, or simply search for your favorite film or character!
+                    <br>You can favorite films or add them to your watchlist. However, currently these features do not persist after reload. 
+                    <br>Maybe someday after we've finished our witch training!</h4>
+            </div>
+        </div>
+        <div id='moreContain' class='main-divs'></div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
